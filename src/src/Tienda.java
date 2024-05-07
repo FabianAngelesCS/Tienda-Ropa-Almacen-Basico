@@ -5,7 +5,7 @@ public class Tienda {
     private int cantidadProductos;
 
     public Tienda(int  capacidadMaxima) {
-        this.inventario = new Producto[capacidadMaxima]
+        this.inventario = new Producto[capacidadMaxima];
         this.cantidadProductos = 0;
     }
 
