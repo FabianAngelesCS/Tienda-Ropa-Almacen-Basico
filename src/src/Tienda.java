@@ -4,18 +4,23 @@ public class Tienda {
 
     private int cantidadProductos;
 
-    public Tienda(int  capacidadMaxima) {
-        this.inventario = new Producto[capacidadMaxima];
+    public Tienda() {
+        this.inventario = new Producto[30];
         this.cantidadProductos = 0;
     }
 
-    public void agregarProductos(Producto producto){
+    public void imprimirInventario(){
 
-        if (cantidadProductos < inventario.length){
+        for (Producto producto : inventario){
+            System.out.println("Nombre: " + producto.getNombre());
+        }
+    }
+
+    public void agregarProductos(Producto producto){
             inventario[cantidadProductos] = producto;
             cantidadProductos++;
             System.out.println("El siguiete producto fue agregado correctamente: " + producto.getNombre());
-        }
+
     }
 
 }
