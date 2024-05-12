@@ -5,21 +5,31 @@ public class Tienda {
     private int cantidadProductos;
 
     public Tienda() {
-        this.inventario = new Producto[30];
-        this.cantidadProductos = 0;
+        inventario = new Producto[30];
+        cantidadProductos = 0;
     }
 
+    //Metodo para imprimir datos del inventario.
     public void imprimirInventario(){
 
-        for (Producto producto : inventario){
-            System.out.println("Nombre: " + producto.getNombre());
+        for (int i = 0; i < cantidadProductos; i++){
+            System.out.println("Nombre: " + inventario[i].getNombre() +
+                               " ----precio: - $" + inventario[i].getPrecio());
         }
     }
 
+    //Metodo para agregar datos al inventario.
     public void agregarProductos(Producto producto){
             inventario[cantidadProductos] = producto;
             cantidadProductos++;
-            System.out.println("El siguiete producto fue agregado correctamente: " + producto.getNombre());
+            System.out.println("El producto fue agregado correctamente: ");
+
+    }
+
+    //Metodo para imprimir cantidad de productos del  inventario.
+    public void imprimirCantidadDisponible(){
+        System.out.println("la cantidad de productos en el inventario es: " + cantidadProductos);
+
 
     }
 
